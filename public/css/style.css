@@ -9,11 +9,12 @@
     font-family: 'Bakbak One', cursive;
 }
 
-.apresation {
+.presentation {
     font-size: 25px;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 20px;
 }
+
 .card-text {
     color: #07b77f;
 }
@@ -21,4 +22,38 @@
 .card-parcel {
     color: black;
     font-size: 15px;
+}
+
+.nav-link {
+    color: #69fafa !important;
+}
+
+.nav-link:hover {
+    color: #00fc50 !important;
+}
+
+#carrinho {
+    color: whitesmoke;
+    margin-right: 10px;
+}
+
+#login {
+    color: whitesmoke;
+    margin-right: 10px;
+}
+
+#search {
+    margin-left: 120px;
+}
+
+.bi:hover {
+    color: #00fc50;
+}
+
+.btn {
+    background-color: #16819C !important;
+}
+
+.btn:hover {
+    color: #00fc50 !important;
 }
