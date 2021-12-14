@@ -1,15 +1,9 @@
 {
-  "name": "$vendor_name$/$package_name$",
-  "description": "$description$",
-  "minimum-stability": "$stability$",
+  "description": "Aplicação web feita durante a disciplina de desenvolvimento web. Cefet-MG Campus Leopoldina",
+  "minimum-stability": "dev",
   "license": "$license$",
-  "authors": [
-    {
-      "name": "$author$",
-      "email": "$email$"
-    }
-  ],
+
   "require": {
-    $END$
+    "php": "7.4"
   }
 }
