@@ -1,3 +1,3 @@
 <?php
-    echo "testando";
+    include_once ("index.html");
 ?>
