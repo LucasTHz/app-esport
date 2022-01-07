@@ -1,7 +1,7 @@
 <?php
-    $host = "us-cdbr-east-04.cleardb.com";
-    $user = "bb5d3b57d53ec3";
-    $password = "1151642e";
+    $host = "localhost";
+    $user = "user";
+    $password = "354234dhgjsdf";
 
     $link = mysqli_connect($host, $user, $password);
 
