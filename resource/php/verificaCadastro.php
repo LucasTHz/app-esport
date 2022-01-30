@@ -81,14 +81,15 @@ if (strlen($password) < 8 || strlen($password) > 16)
 if (strcmp($confirmed_password, $password) != 0)
     array_push($error, "As senhas não se conferem.");
 
-//if (strlen($estado != 2)) {
-//    array_push($error, "Estado inválido. Ex: MG");
-//}
+if (strlen($estado) != 2) {
+    array_push($error, "Estado inválido. Ex: MG");
+}
 
-// verificação se o email já existe no banco de dados
+// verificação se o email, cpf e celular já existe no banco de dados
 try {
     $test = new connectDataBase();
     $conexao = $test->getConnection();
+
     $sql = "SELECT * from cliente WHERE email = '$email'";
     $resultado = mysqli_query($conexao, $sql);
 
@@ -96,11 +97,16 @@ try {
         array_push($error, "Endereço de email já existe.");
 
     $sql = "SELECT * from cliente WHERE celular = '$celular'";
-
     $resultado = mysqli_query($conexao, $sql);
 
     if ($resultado->fetch_array())
         array_push($error, "Número de celular já existe.");
+
+    $sql = "SELECT * from cliente WHERE cpf = '$cpf'";
+    $resultado = mysqli_query($conexao, $sql);
+
+    if ($resultado->fetch_array())
+        array_push($error, "CPF já existe.");
 
 } catch (Exception $e) {
     echo "Error: " . $e->getMessage();
