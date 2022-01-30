@@ -9,13 +9,13 @@ $id = $_SESSION['id'];
 $error = [];
 
 if (empty($nome))
-    array_push($error,"O campo nome é obrigatório.");
+    $error[] = "O campo nome é obrigatório.";
 
 if (empty($email))
-    array_push($error,"O campo email é obrigatório.");
+    $error[] = "O campo email é obrigatório.";
 
 if (strlen($email) < 8 || !strstr($email, '@'))
-    array_push($error, "Favor digitar o seu email corretamente.");
+    $error[] = "Favor digitar o seu email corretamente.";
 
 // conexão com o banco e verificação se o email já não pertence a outro cliente
 try {
@@ -26,7 +26,7 @@ try {
     $conexao->close();
 
     if ($resultado->fetch_array())
-        array_push($error, "Endereço de email já existe.");
+        $error[] = "Endereço de email já existe.";
 
 } catch (Exception $e) {
     echo "Error: " . $e->getMessage();

@@ -47,42 +47,42 @@ function validaCPF($cpf): bool
 }
 
 if (empty($nome))
-    array_push($error, "O campo nome é obrigatório.");
+    $error[] = "O campo nome é obrigatório.";
 
 
 if (empty($sobrenome))
-    array_push($error, "O campo sobrenome é obrigatório.");
+    $error[] = "O campo sobrenome é obrigatório.";
 
 
 if (empty($email))
-    array_push($error, "O campo email é obrigatório.");
+    $error[] = "O campo email é obrigatório.";
 
 
 if (empty($password))
-    array_push($error, "O campo senha é obrigatório.");
+    $error[] = "O campo senha é obrigatório.";
 
 if (empty($celular))
-    array_push($error, "O campo número de celular é obrigatório");
+    $error[] = "O campo número de celular é obrigatório";
 
 
 if (empty($confirmed_password))
-    array_push($error, "Você precisa confirmar a sua senha.");
+    $error[] = "Você precisa confirmar a sua senha.";
 
 
 if (strlen($email) < 8 || !strstr($email, '@')) {
-    array_push($error, "Favor digitar o seu email corretamente.");
+    $error[] = "Favor digitar o seu email corretamente.";
 }
 
 
 if (strlen($password) < 8 || strlen($password) > 16)
-    array_push($error, "Favor digitar uma senha com 8 caracteres minimo e 16 caracteres no maximo.");
+    $error[] = "Favor digitar uma senha com 8 caracteres minimo e 16 caracteres no maximo.";
 
 
 if (strcmp($confirmed_password, $password) != 0)
-    array_push($error, "As senhas não se conferem.");
+    $error[] = "As senhas não se conferem.";
 
 if (strlen($estado) != 2) {
-    array_push($error, "Estado inválido. Ex: MG");
+    $error[] = "Estado inválido. Ex: MG";
 }
 
 // verificação se o email, cpf e celular já existe no banco de dados
@@ -94,19 +94,19 @@ try {
     $resultado = mysqli_query($conexao, $sql);
 
     if ($resultado->fetch_array())
-        array_push($error, "Endereço de email já existe.");
+        $error[] = "Endereço de email já existe.";
 
     $sql = "SELECT * from cliente WHERE celular = '$celular'";
     $resultado = mysqli_query($conexao, $sql);
 
     if ($resultado->fetch_array())
-        array_push($error, "Número de celular já existe.");
+        $error[] = "Número de celular já existe.";
 
     $sql = "SELECT * from cliente WHERE cpf = '$cpf'";
     $resultado = mysqli_query($conexao, $sql);
 
     if ($resultado->fetch_array())
-        array_push($error, "CPF já existe.");
+        $error[] = "CPF já existe.";
 
 } catch (Exception $e) {
     echo "Error: " . $e->getMessage();
@@ -114,7 +114,7 @@ try {
 
 // chamo a função que faz a verificação do cpf
 if (!validaCPF($cpf)) {
-    array_push($error, "CPF inválido.");
+    $error[] = "CPF inválido.";
 }
 
 // realiza a criação do cliente no banco de dados ou redireciona para a tela de cadastro
