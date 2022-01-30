@@ -25,16 +25,16 @@
 }
 
 .nav-link {
-    color: #69fafa !important;
+    color: white !important;
 }
 
 .nav-link:hover {
-    color: #00fc50 !important;
+    color: #69fafa !important;
 }
 
-#car {
-    color: whitesmoke;
-    margin-right: 10px;
+#perfil {
+    color: whitesmoke !important;
+    margin-right: 10px !important;
 }
 
 #login {
@@ -42,21 +42,28 @@
     margin-right: 10px;
 }
 
+#car {
+    color: whitesmoke;
+    margin-right: 10px;
+}
+
+#logout {
+    color: whitesmoke;
+    margin-right: 10px;
+  }
+
 #search {
     margin-left: 120px;
 }
 
 .bi:hover {
-    color: #00fc50;
+    color: #69fafa;
 }
 
-.btn {
-    background-color: #16819C !important;
-}
 
-.btn:hover {
-    color: #00fc50 !important;
-}
+/*.btn:hover {*/
+/*    color: #69fafa !important;*/
+/*}*/
 
 *::-webkit-scrollbar {
     width: 12px;

@@ -1,0 +1,20 @@
+* {
+    font-family: 'Bakbak One', cursive;
+}
+
+.form-login {
+    margin-left: 50px !important;
+    margin-top: 100px !important;
+}
+
+#formGroupExampleInput {
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 20px;
+}
+
+#formGroupExampleInput2 {
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 20px;
+}

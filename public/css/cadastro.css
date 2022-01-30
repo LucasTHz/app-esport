@@ -1,0 +1,28 @@
+* {
+    font-family: 'Bakbak One', cursive;
+}
+
+.input-dados {
+    background-size: 100px;
+    background: #FFFFFF;
+    border: 2px solid black ;
+    border-radius: 20px ;
+}
+
+#formcadastro {
+    text-align: center;
+    position: relative;
+}
+
+.label-senha {
+    margin-top: 20px;
+}
+
+.botao {
+    border: 2px solid #07b77f;
+    border-radius: 20px;
+}
+
+.titulo {
+    text-align: center
+}

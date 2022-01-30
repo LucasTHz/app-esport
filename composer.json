@@ -4,6 +4,12 @@
   "license": "$license$",
 
   "require": {
-    "php": "7.4"
+    "php": "7.4",
+    "ext-mysqli": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "config\\": "config"
+    }
   }
 }
