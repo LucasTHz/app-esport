@@ -26,7 +26,7 @@ session_start();
         </form>
         <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="bi bi-cart" id="car"></i>Carrinho</a>
+                <a class="nav-link" href="resource/carrinhoCliente.php"><i class="bi bi-cart" id="car"></i>Carrinho</a>
             </li>
 
             <li class="nav-item">
@@ -59,7 +59,9 @@ session_start();
                 <p class="card-text">FRETE GRÁTIS</p>
                 <p class="card-price">R$ 299,99</p>
                 <p class="card-parcel">4x de R$ 74,99 <br>SEM JUROS</p>
-                <a href="#" class="btn btn-primary">Comprar</a>
+                <form action="resource/php/adicionaCarrinho.php" method="post">
+                    <button type="submit" class="btn btn-primary" name="teste" value="prod1">Comprar</button>
+                </form>
             </div>
         </div>
     </div>
@@ -72,7 +74,9 @@ session_start();
                 <p class="card-text">FRETE GRÁTIS</p>
                 <p class="card-price">R$ 229,99</p>
                 <p class="card-parcel">4x de R$ 57,50 <br>SEM JUROS</p>
-                <a href="#" class="btn btn-primary">Comprar</a>
+                <form action="resource/php/adicionaCarrinho.php" method="post">
+                    <button type="submit" class="btn btn-primary" name="teste" value="prod2">Comprar</button>
+                </form>
             </div>
         </div>
     </div>

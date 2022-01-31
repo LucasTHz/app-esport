@@ -5,6 +5,7 @@ require 'Cliente.php';
 
 $nome = $_POST['name'];
 $email = $_POST['email'];
+$estado = $_POST['estado'];
 $id = $_SESSION['id'];
 $error = [];
 
@@ -16,6 +17,10 @@ if (empty($email))
 
 if (strlen($email) < 8 || !strstr($email, '@'))
     $error[] = "Favor digitar o seu email corretamente.";
+
+if (strlen($estado) != 2)
+    $error[] = "Estado inválido. Ex: MG";
+
 
 // conexão com o banco e verificação se o email já não pertence a outro cliente
 try {
