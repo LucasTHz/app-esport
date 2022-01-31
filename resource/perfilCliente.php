@@ -68,6 +68,7 @@ if (!empty($_SESSION['error'])) {
     $cpf = $infos['cpf'];
     $rua = $infos['rua'];
     $cidade = $infos['cidade'];
+    $estado = $infos['estado'];
     $bairro = $infos['bairro'];
     $complemento = $infos['complemento'];
     $numero = $infos['numero'];
@@ -95,19 +96,23 @@ if (!empty($_SESSION['error'])) {
     echo "<input type='text' name='cidade' class='input-dados form-control' value='$cidade'>";
     echo "</label>";
 
-    echo "<label style='margin-left: 20px'>Bairro";
+    echo "<label style='margin-left: 20px' >Estado";
+    echo "<input type='text' name='estado' class='input-dados form-control' value='$estado'>";
+    echo "</label>";
+
+    echo "<label>Bairro";
     echo "<input type='text' name='bairro' class='input-dados form-control' value='$bairro'>";
     echo "</label>";
 
-    echo "<label>Complemento";
+    echo "<label style='margin-left: 20px'>Complemento";
     echo "<input type='text' name='complemento' class='input-dados form-control' value='$complemento'>";
     echo "</label>";
 
-    echo "<label style='margin-left: 20px'>Número";
+    echo "<label>Número";
     echo "<input type='text' name='numero' class='input-dados form-control' value='$numero'>";
     echo "</label>";
 
-    echo "<label>Celular";
+    echo "<label style='margin-left: 20px'>Celular";
     echo "<input type='text' name='celular' class='input-dados form-control' value='$celular'>";
     echo "</label>";
 
