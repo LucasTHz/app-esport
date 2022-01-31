@@ -18,7 +18,6 @@ session_start();
 <nav class="navbar navbar-light" style="background-color: #16819C; margin-right: auto">
     <div class="container-fluid">
         <a class="navbar-brand" style="color: whitesmoke;" href="../index.php">App Esport</a>
-        <legend>Carrinho</legend>
     </div>
 </nav>
 
@@ -29,6 +28,18 @@ if (!empty($_SESSION['error'])) {
     unset($_SESSION['error']);
 
     echo "</div>";
+}
+
+if (empty($_SESSION['cliente'])) {
+    echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>";
+    echo "<p style='text-align: center'>Carrinho vazio";
+    echo "</div>";
+} else {
+    foreach ($_SESSION['cliente'] as $cliente) {
+        echo "<div>";
+        echo $cliente;
+        echo "</div>";
+    }
 }
 ?>
 </body>
