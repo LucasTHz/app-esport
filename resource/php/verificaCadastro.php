@@ -120,7 +120,9 @@ if (!validaCPF($cpf)) {
 // realiza a criação do cliente no banco de dados ou redireciona para a tela de cadastro
 // com os erros encontrados
 if (empty($error)) {
-    include 'createClient.php';
+    include_once "Cliente.php";
+    $teste = new Cliente();
+    $teste->store();
 } else {
     $_SESSION['error'] = $error;
     header("location: ../cadastrarCliente.php");
