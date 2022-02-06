@@ -1,5 +1,10 @@
 <?php
-include '../../config/connectDataBase.php';
+namespace Resource\php;
+include '../../vendor/autoload.php';
+
+use Config\connectDataBase;
+use Exception;
+
 session_start();
 
 $nome = $_POST['name'];
@@ -120,7 +125,6 @@ if (!validaCPF($cpf)) {
 // realiza a criação do cliente no banco de dados ou redireciona para a tela de cadastro
 // com os erros encontrados
 if (empty($error)) {
-    include_once "Cliente.php";
     $teste = new Cliente();
     $teste->store();
 } else {

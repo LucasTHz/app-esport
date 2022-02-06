@@ -1,15 +1,23 @@
 {
+  "name": "lucasthz/app-esport",
   "description": "Aplicação web feita durante a disciplina de desenvolvimento web. Cefet-MG Campus Leopoldina",
   "minimum-stability": "dev",
   "license": "$license$",
+  "authors": [
+    {
+      "name": "Lucas Thomaz Pimentel",
+      "email": "lucasthomaz58@gmail.com"
+    }
+  ],
 
   "require": {
-    "php": "7.4",
+    "php": "8.*",
     "ext-mysqli": "*"
   },
   "autoload": {
     "psr-4": {
-      "config\\": "config"
+      "Config\\": "config",
+      "Resource\\": "resource/"
     }
   }
 }

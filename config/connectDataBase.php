@@ -1,4 +1,9 @@
 <?php
+namespace config;
+
+use Exception;
+use mysqli;
+
 Class connectDataBase {
     public function getConnection(): mysqli
     {

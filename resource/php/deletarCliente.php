@@ -1,6 +1,8 @@
 <?php
+namespace Resource\php;
+include '../../vendor/autoload.php';
 session_start();
-include 'Cliente.php';
+
 $id = $_SESSION['id'];
 
 $cliente = new Cliente();

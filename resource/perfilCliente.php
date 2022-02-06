@@ -59,7 +59,8 @@ if (!empty($_SESSION['error'])) {
 
 <form action="php/updateCliente.php" method="post">
     <?php
-    include 'php/Cliente.php';
+    include '../vendor/autoload.php';
+    use Resource\php\Cliente;
     $test = new Cliente();
     $infos = $test->show($_SESSION['id']);
 

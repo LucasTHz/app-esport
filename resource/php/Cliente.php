@@ -1,6 +1,9 @@
 <?php
-include_once '../config/connectDataBase.php';
-include_once '../../config/connectDataBase.php';
+namespace Resource\php;
+include '../../vendor/autoload.php';
+use Config\connectDataBase;
+use Exception;
+
 session_start();
 
 class Cliente

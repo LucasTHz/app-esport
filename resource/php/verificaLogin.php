@@ -1,6 +1,10 @@
 <?php
+namespace Resource\php;
+include '../../vendor/autoload.php';
+
 session_start();
-require '../../config/connectDataBase.php';
+
+use Config\connectDataBase;
 
 $email = $_POST['email'];
 $password = $_POST['password'];
